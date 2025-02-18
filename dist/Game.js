@@ -23,7 +23,6 @@ class Game {
         }));
     }
     makeMove(socket, move) {
-        console.log(this.board.board());
         if (this.board.move.length % 2 === 0 && socket != this.player1) {
             return;
         }
@@ -64,6 +63,7 @@ class Game {
                 payload: move
             }));
         }
+        console.log(this.board.board());
     }
 }
 exports.Game = Game;
